@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { intlFormat } from "date-fns";
+import RSVP from "../components/RSVP";
+---
+
+<Layout>
+  <main class="container py-4 mx-auto max-w-4xl text-lg">
+    <h2 class="text-center text-xl uppercase">
+      {
+        intlFormat(new Date("2023-08-31T18:00:00+01:00"), {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        })
+      } &nbsp;•&nbsp; The location
+    </h2>
+    <img
+      class="mx-auto pt-6"
+      height="900"
+      width="1600"
+      src="http://placekitten.com/1600/900"
+      alt=""
+    />
+    <p class="px-6 py-4">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+      perferendis dolorum nostrum, aliquam delectus reprehenderit quis eos
+      officiis quam! Culpa iste repudiandae incidunt provident quidem nihil
+      beatae voluptatibus rem molestias.
+    </p>
+    <iframe
+      class="mx-auto"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63882.82979756894!2d12.503635804628495!3d41.91244550348169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sil!4v1671746900631!5m2!1sen!2sil"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- https://docs.google.com/forms/u/0/d/e/1FAIpQLSevFtIFDuiqL9GfgJmbv0wYkWiQaHiiKBcxZ1iwU6vQSlj7-g/formResponse -->
+    <RSVP client:idle />
+  </main>
+</Layout>

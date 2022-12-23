@@ -1,0 +1,30 @@
+---
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language} data-theme="garden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{"Lior & Ariel"}</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <header>
+      <div class="text-right p-4">
+        <select name="lang" id="lang" class="select text-2xl select-bordered">
+          <option value="HE">HE</option>
+          <option value="IT">IT</option>
+          <option value="EN">EN</option>
+        </select>
+      </div>
+      <h1 class="text-6xl text-center uppercase">Lior & Ariel</h1>
+    </header>
+    <slot />
+    <footer class="p-6 mt-auto">
+      <h2 class="text-center text-xl">L&A</h2>
+    </footer>
+  </body>
+</html>

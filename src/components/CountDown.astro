@@ -1,0 +1,13 @@
+---
+import {formatDistanceToNow} from "date-fns"
+
+export interface Props {
+	date: Date
+}
+
+const { date } = Astro.props;
+---
+
+<div>
+	{formatDistanceToNow(date)}
+</div>

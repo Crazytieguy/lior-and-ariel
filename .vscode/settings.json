@@ -1,0 +1,9 @@
+{
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "tailwindCSS.includeLanguages": {
+        "astro": "html"
+    },
+    "prettier.documentSelectors": ["**/*.astro"]
+}
