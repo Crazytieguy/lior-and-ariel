@@ -1,6 +1,15 @@
 ---
 import i18next, { t } from "i18next";
 import { HeadHrefLangs, LanguageSelector } from "astro-i18next/components";
+import { format } from "date-fns";
+import { enUS, he, it } from "date-fns/locale";
+import NavBar from "../components/NavBar.astro";
+
+const locales: { [key: string]: Locale } = {
+  en: enUS,
+  he,
+  it,
+};
 ---
 
 <!DOCTYPE html>
@@ -13,7 +22,7 @@ import { HeadHrefLangs, LanguageSelector } from "astro-i18next/components";
     <meta name="description" content={t("site.description")} />
     <HeadHrefLangs />
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen mx-auto max-w-4xl">
     <header>
       <div class="text-right p-4">
         <LanguageSelector
@@ -21,7 +30,19 @@ import { HeadHrefLangs, LanguageSelector } from "astro-i18next/components";
           class="select select-bordered text-2xl"
         />
       </div>
-      <h1 class="text-6xl text-center uppercase">{t("header.title")}</h1>
+      <div class="text-center uppercase">
+        <h1 class="text-6xl text-neutral">
+          {t("header.title")}
+        </h1>
+        <h2 class="mt-4 text-xl text-secondary-content">
+          {
+            format(new Date("2023-08-31T18:00:00+01:00"), "PP", {
+              locale: locales[i18next.language],
+            })
+          } &nbsp;•&nbsp; The location
+        </h2>
+      </div>
+      <NavBar />
     </header>
     <slot />
     <footer class="p-6 mt-auto">

@@ -1,0 +1,12 @@
+---
+import { localizePath } from "astro-i18next";
+---
+
+<nav>
+  <ul class="flex ml-6">
+    <li><a href={localizePath("/")} class="btn btn-ghost text-xl">Home</a></li>
+    <li>
+      <a href={localizePath("/about")} class="btn btn-ghost text-xl">About</a>
+    </li>
+  </ul>
+</nav>

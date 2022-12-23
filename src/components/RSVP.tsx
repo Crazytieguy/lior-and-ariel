@@ -12,7 +12,8 @@ const RSVP = () => {
             body: formData
         }).then(console.log)
     }
-    return <form ref={formElem!} onSubmit={onSubmit} class="form-control py-4 px-6 items-start">
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return <form ref={formElem!} onSubmit={onSubmit} class="form-control py-4 px-8 mx-2 mt-8 items-start bg-primary bg-opacity-10 rounded-2xl">
     <label for="email" class="py-1">
       <div class="py-2">Email</div>
     </label>
@@ -59,19 +60,19 @@ const RSVP = () => {
       <legend class="py-2"> Do you have any dietary requirements?</legend>
       <div class="py-1">
         <label class="flex items-center gap-2">
-          <input class="checkbox" type="checkbox" name="entry.2111674010" id="vegan" value="Vegan"/>
+          <input class="checkbox bg-base-100" type="checkbox" name="entry.2111674010" id="vegan" value="Vegan"/>
           Vegan
         </label>
       </div>
       <div class="py-1">
         <label class="flex items-center gap-2">
-          <input class="checkbox" type="checkbox" name="entry.2111674010" id="vegetarian" value="Vegetarian"/>
+          <input class="checkbox bg-base-100" type="checkbox" name="entry.2111674010" id="vegetarian" value="Vegetarian"/>
           Vegetarian
         </label>
       </div>
       <div class="py-1">
         <label class="flex items-center gap-2">
-          <input class="checkbox" type="checkbox" name="entry.2111674010" id="glutenFree" value="No Gluten"/>
+          <input class="checkbox bg-base-100" type="checkbox" name="entry.2111674010" id="glutenFree" value="No Gluten"/>
           Gluten Free
         </label>
       </div>
@@ -82,7 +83,7 @@ const RSVP = () => {
     <textarea
       class="input input-bordered invalid:input-error"
       name="entry.2606285"
-      id="comments"></textarea>
+      id="comments" />
     <button class="btn mt-4" type="submit">Submit</button>
   </form>
 }
