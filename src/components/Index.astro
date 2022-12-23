@@ -1,6 +1,7 @@
 ---
 import { intlFormat } from "date-fns";
 import RSVP from "./RSVP";
+import { t } from "i18next";
 ---
 
 <main class="container py-4 mx-auto max-w-4xl text-lg">
@@ -21,10 +22,7 @@ import RSVP from "./RSVP";
     alt=""
   />
   <p class="px-6 py-4">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-    perferendis dolorum nostrum, aliquam delectus reprehenderit quis eos
-    officiis quam! Culpa iste repudiandae incidunt provident quidem nihil beatae
-    voluptatibus rem molestias.
+    {t("lorem")}
   </p>
   <iframe
     class="mx-auto"
