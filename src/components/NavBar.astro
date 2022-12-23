@@ -3,10 +3,12 @@ import { localizePath } from "astro-i18next";
 ---
 
 <nav>
-  <ul class="flex ml-6">
-    <li><a href={localizePath("/")} class="btn btn-ghost text-xl">Home</a></li>
+  <ul class="flex ml-6 gap-4 text-secondary-content">
     <li>
-      <a href={localizePath("/about")} class="btn btn-ghost text-xl">About</a>
+      <a href={localizePath("/")} class="text-xl hover:underline">Home</a>
+    </li>
+    <li>
+      <a href={localizePath("/about")} class="text-xl hover:underline">About</a>
     </li>
   </ul>
 </nav>
