@@ -2,7 +2,9 @@
 import i18next, { t } from "i18next";
 import { HeadHrefLangs, LanguageSelector } from "astro-i18next/components";
 import { format } from "date-fns";
-import { enUS, he, it } from "date-fns/locale";
+import he from "date-fns/locale/he/index.js";
+import it from "date-fns/locale/it/index.js";
+import enUS from "date-fns/locale/en-US/index.js";
 import NavBar from "../components/NavBar.astro";
 
 const locales: { [key: string]: Locale } = {
